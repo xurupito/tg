@@ -13,6 +13,8 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
           }
         });
+
+        City.hasMany(models.Candidate);
       }
     },
     tableName: 'cities',

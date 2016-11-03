@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     tableName: 'candidates',
-    underscore: true
+    underscored: true
   });
   return Candidate;
 };

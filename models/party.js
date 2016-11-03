@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
   },
   {
     tableName: 'parties',
-    underscore: true
+    underscored: true
   });
   return Party;
 };

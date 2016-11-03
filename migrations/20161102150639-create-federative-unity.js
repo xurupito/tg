@@ -25,6 +25,6 @@ module.exports = {
     });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('FederativeUnities');
+    return queryInterface.dropTable('federative_unities');
   }
 };

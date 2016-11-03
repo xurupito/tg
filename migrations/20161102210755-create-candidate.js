@@ -56,6 +56,6 @@ module.exports = {
     });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('Candidates');
+    return queryInterface.dropTable('candidates');
   }
 };

@@ -15,11 +15,11 @@ module.exports = {
         type: Sequelize.STRING
       },
       createdAt: {
-        field: 'created_at',  
+        field: 'created_at',
         type: Sequelize.DATE
       },
       updatedAt: {
-        field: 'updated_at',  
+        field: 'updated_at',
         type: Sequelize.DATE
       },
       federative_unity_id: {
@@ -32,6 +32,6 @@ module.exports = {
     });
   },
   down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('Cities');
+    return queryInterface.dropTable('cities');
   }
 };

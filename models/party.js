@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+          Party.hasMany(models.Candidacy);
       }
     },
     tableName: 'parties',

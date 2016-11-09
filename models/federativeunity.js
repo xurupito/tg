@@ -7,10 +7,11 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         FederativeUnity.hasMany(models.City);
+        FederativeUnity.hasMany(models.Candidacy);
       }
     },
     tableName: 'federative_unities',
-    underscored: true 
+    underscored: true
   });
   return FederativeUnity;
 };

@@ -7,6 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
           Position.hasMany(models.Candidacy);
+          Position.hasMany(models.Coalition);
       }
     },
     tableName: 'positions',

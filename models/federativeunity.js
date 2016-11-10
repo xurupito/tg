@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         FederativeUnity.hasMany(models.City);
         FederativeUnity.hasMany(models.Candidacy);
+        FederativeUnity.hasMany(models.Coalition);
       }
     },
     tableName: 'federative_unities',

@@ -48,7 +48,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       campaign_max_spend: {
-        type: Sequelize.DOUBLE
+        type: Sequelize.DECIMAL
       },
       email: {
         type: Sequelize.STRING

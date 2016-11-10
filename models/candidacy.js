@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
     schooling_description: DataTypes.STRING,
     civil_state_code: DataTypes.INTEGER,
     civil_state_description: DataTypes.STRING,
-    campaign_max_spend: DataTypes.DOUBLE,
+    campaign_max_spend: DataTypes.DECIMAL,
     email: DataTypes.STRING
   }, {
     classMethods: {

@@ -36,7 +36,9 @@ module.exports = function(sequelize, DataTypes) {
           }
         });
       }
-    }
+    },
+    tableName: 'coalitions',
+    underscored: true
   });
   return Coalition;
 };

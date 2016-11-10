@@ -19,41 +19,43 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-          Candidate.belongsTo(models.Candidate, {
+          Candidacy.belongsTo(models.Candidate, {
               onDelete: "CASCADE",
               foreignKey: {
                   fieldName: 'candidate_id',
                   allowNull:false
               }
           });
-          Candidate.belongsTo(models.Election, {
+          Candidacy.belongsTo(models.Election, {
               onDelete: "CASCADE",
               foreignKey: {
                   fieldName: 'election_id',
                   allowNull:false
               }
           });
-          Candidate.belongsTo(models.Position, {
+          Candidacy.belongsTo(models.Position, {
               onDelete: "CASCADE",
               foreignKey: {
                   fieldName: 'position_id',
                   allowNull:false
               }
           });
-          Candidate.belongsTo(models.Party, {
+          Candidacy.belongsTo(models.Party, {
               onDelete: "CASCADE",
               foreignKey: {
                   fieldName: 'party_id',
                   allowNull:false
               }
           });
-          Candidate.belongsTo(models.FederarativeUnity, {
+          Candidacy.belongsTo(models.FederarativeUnity, {
               onDelete: "CASCADE",
               foreignKey: {
                   fieldName: 'federative_unity_id',
                   allowNull:false
               }
           });
+
+          Candidacy.hasMany(models.Acquisition);
       }
     },
     tableName: 'candidacies',

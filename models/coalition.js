@@ -35,6 +35,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
           }
         });
+        Coalition.belongsToMany(models.Party, {as: 'Parties', through: 'coalition_parties', foreignKey: 'coalition_id', otherKey: 'party_id'});
       }
     },
     tableName: 'coalitions',

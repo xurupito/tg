@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
           Party.hasMany(models.Candidacy);
+          Party.belongsToMany(models.Coalition, {as: 'Coalitions', through: 'coalition_parties', foreignKey: 'party_id', otherKey: 'coalition_id'});
       }
     },
     tableName: 'parties',

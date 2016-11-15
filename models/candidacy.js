@@ -47,7 +47,7 @@ module.exports = function(sequelize, DataTypes) {
                   allowNull:false
               }
           });
-          Candidacy.belongsTo(models.FederarativeUnity, {
+          Candidacy.belongsTo(models.FederativeUnity, {
               onDelete: "CASCADE",
               foreignKey: {
                   fieldName: 'federative_unity_id',

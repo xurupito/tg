@@ -9,14 +9,14 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        City.belongsTo(models.Candidacy, {
+        Acquisition.belongsTo(models.Candidacy, {
           onDelete: "CASCADE",
           foreignKey: {
             fieldName: 'federative_unity_id',
             allowNull: false
           }
         });
-        City.belongsTo(models.FederativeUnity, {
+        Acquisition.belongsTo(models.FederativeUnity, {
           onDelete: "CASCADE",
           foreignKey: {
             fieldName: 'federative_unity_id',

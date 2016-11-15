@@ -9,26 +9,26 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        City.belongsTo(models.Position, {
+        Coalition.belongsTo(models.Position, {
           foreignKey: {
             fieldName: 'position_id',
             allowNull: false
           }
         });
-        City.belongsTo(models.Election, {
+        Coalition.belongsTo(models.Election, {
           foreignKey: {
             fieldName: 'election_id',
             allowNull: false
           }
         });
-        City.belongsTo(models.FederativeUnity, {
+        Coalition.belongsTo(models.FederativeUnity, {
           onDelete: "CASCADE",
           foreignKey: {
             fieldName: 'federative_unity_id',
             allowNull: false
           }
         });
-        City.belongsTo(models.ElectoralUnity, {
+        Coalition.belongsTo(models.ElectoralUnity, {
           onDelete: "CASCADE",
           foreignKey: {
             fieldName: 'electoral_unity_id',

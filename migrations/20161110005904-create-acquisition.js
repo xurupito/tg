@@ -30,6 +30,13 @@ module.exports = {
       updated_at: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      candidacy_id : {
+        type: Sequelize.INTEGER,
+        references: 'candidacies',
+        referenceKey: 'id',
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       }
     });
   },
